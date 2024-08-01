@@ -1074,7 +1074,6 @@ margin: 0 auto;
 .fade-in{
     opacity: 0;
     transition-duration: 1000ms;
-    /* ↑秒数 */
     transition-property: opacity, transform;
     transform: translate(0,50px)
 }
@@ -1082,7 +1081,6 @@ margin: 0 auto;
 .fade-in2{
     opacity: 0;
     transition-duration: 1000ms;
-    /* ↑秒数 */
     transition-property: opacity, transform;
     transform: translate(0,100px)
 }
