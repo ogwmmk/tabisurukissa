@@ -1089,7 +1089,8 @@ body {
     @media screen and (max-width: 767px) { /*ウィンドウ幅が最大767pxまでの場合に適用_スマートフォン*/
 
     .mw_1280{
-    max-width: 100%;
+    /* max-width: 100%; */
+    width: 100%;
     margin: 0 auto;
     }
 
@@ -1345,6 +1346,8 @@ body {
 
     /* news */
     .news{
+        display: flex;
+        flex-direction: column;
         margin-top: 100px;
         margin-bottom: 90px;
         padding: 50px 50px;
@@ -1352,10 +1355,19 @@ body {
     }
 
     .news_container{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        /* flex-direction: column; */
+        /* justify-content: space-between; */
+        /* align-items: center; */
+        order: 1;
+
     }
+
+
+    .news_container3{
+        order: 2;
+
+    }
+
 
     .news_title{
         font-size: 25px;
@@ -1363,14 +1375,16 @@ body {
     }
 
     .news_moreBox{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 120px;
-        height: 30px;
-        border: 1px solid black;
-        transition: all 0.3s ease 0s;
-        cursor: pointer;
+        order: 3;
+        /* display: flex; */
+        /* justify-content: center; */
+        /* align-items: center; */
+        /* width: 120px; */
+        /* height: 30px; */
+        /* border: 1px solid black; */
+        /* transition: all 0.3s ease 0s; */
+        /* cursor: pointer; */
+        /* order: 3; */
     }
 
     .news_moreBox:hover{
@@ -1383,19 +1397,27 @@ body {
         font-weight: bold;
         letter-spacing: 1px;
         text-decoration: none;
+        /* border: 1px solid black; */
+
     }
     .news_menu{
         margin: 0;
         padding: 0;
-        list-style: none;
+        /* list-style: none; */
+        /* order: 2; */
+        list-style: disc;
+
     }
     .news_list{
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        align-items: flex-start;
         font-size: 13px;
         line-height:1.5;
         transition: all 0.3s ease 0s;
         cursor: pointer;
+        display: list-item;
+
     }
 
     .news_list:hover{
@@ -1403,18 +1425,23 @@ body {
     }
 
     .news_day{
+        margin-bottom: 5px;
+        font-size: 12px;
         letter-spacing : 1px;
         font-weight: bold
 
     }
 
     .news_text{
+        margin: 0;
+        font-size: 12px;
         letter-spacing : 1.4px;
         font-family: YuGothic,'Yu Gothic',sans-serif;
-
     }
 
+
     .news_mark{
+        display: none;
         margin: 0 10px;
         font-size: 20px;
         font-weight: bold
@@ -1649,14 +1676,16 @@ body {
 
     .onlineShop_container{
         display: flex;
+        flex-direction: column
 
     }
     .onlineShop_content{
-        width: 350px;
+        order: 2;
+        width: 100%;
 
     }
     .onlineShop_title{
-        font-size: 28px;
+        font-size: 25px;
         font-weight: bold;
         letter-spacing : 2px;
         line-height:1.8;
@@ -1664,14 +1693,14 @@ body {
     }
 
     .onlineShop_subTitle{
-        font-size: 17px;
+        font-size: 14px;
         font-weight: bold;
         letter-spacing : 2px;
         line-height:1.8;
     }
 
     .onlineShop_text{
-        font-size: 13px;
+        font-size: 11px;
         letter-spacing : 1.1px;
         line-height:2;
     }
@@ -1690,7 +1719,7 @@ body {
         padding-right: 35px;
         padding-bottom: 7px;
         font-weight: bold;
-        font-size: 12px;
+        font-size: 11px;
         letter-spacing : 1px;
         text-decoration: none;
         color: black;
@@ -1715,16 +1744,21 @@ body {
         width: 80%;
     }
 
+    .onlineShop_logo{
+        order: 1;
+    }
+
     .onlineShop_img1{
-        margin-top: 70px;
-        margin-left:60px;
+        margin-top: 0;
+        margin-bottom: 40px;
+        margin-left: 0;
         width: 270px;
         height: 180px;
         object-fit: cover;
     }
 
     .onlineShop_img2{
-        margin-left: auto;
+        margin-left: 20px;
         width: 200px;
         height: 300px;
         object-fit: cover;
@@ -1742,12 +1776,12 @@ body {
 
     .message_title{
         margin: 0;
-        font-size: 32px;
+        font-size: 26px;
         letter-spacing: 1px;
     }
 
     .message_text{
-        font-size: 13px;
+        font-size: 11px;
         font-weight: bold;
         letter-spacing: 1.5px;
     }
@@ -1755,16 +1789,17 @@ body {
     /* contact */
 
     .contact{
-        margin-top: 80px;
+        margin-top: 50px;
     }
 
-    .contact_logo{
-    }
+    /* .contact_logo{
+    } */
 
     .contact_img{
         width: 100%;
-        height: 395px;
+        height: 200px;
         background-image: url("../../assets/img/contact_img.jpg");
+        background-position: 50%  50%;
         background-repeat: no-repeat;
         background-size: 100%;
     }
@@ -1790,8 +1825,8 @@ body {
 
     .contact_title{
         margin: 0;
-        margin-bottom: 10px;
-        font-size: 32px;
+        margin-bottom: 20px;
+        font-size: 28px;
         font-weight: bold;
         letter-spacing: 1px;
     }
@@ -1799,21 +1834,22 @@ body {
     .contact_text{
         margin: 0;
         /* margin-left: 50px; */
-        font-size: 13px;
+        line-height:1.8;
+        font-size: 11px;
         font-weight: bold;
         letter-spacing: 1.8px;
     }
 
     .contact_btn{
         position: absolute;
-        right: -80px;
+        right: -60px;
         width: 130px;
         border: 0.8px solid black;
     }
 
     .contact_box:hover .contact_btn{
-        transition: all 0.3s ease 0s;
-        right: -80px;
+        transition: all 1s ease 0s;
+        right: -70px;
         width: 100px;
         border: 0.8px solid #fff;
     }
@@ -1822,23 +1858,23 @@ body {
 
     .footer{
         display: flex;
-        margin-top: 100px;
+        margin-top: 50px;
     }
 
     .footer_container{
-        display: flex;
-        justify-content: center;
-        padding: 60px;
+        display: block;
+        padding: 30px;
         width: 100%;
         background-color: black;
     }
     .footer_content{
-        padding: 0 40px;
+        padding: 20px 40px;
     }
 
     .footer_hp{
         display: flex;
         align-items: center;
+        justify-content: center;
         transition: all 0.3s ease 0s;
     }
 
@@ -1856,6 +1892,7 @@ body {
     .footer_sns{
         display: flex;
         align-items: center;
+        justify-content: center;
         margin-top: 30px;
     }
 
@@ -1878,33 +1915,31 @@ body {
     .footer_x:hover{
         opacity: 0.6;
     }
-    
-    
+
     .logo{
         padding: 0 20px;
         font-size: 12px;
         color: #fff;
     }
-    
-    
+
     .footer_icon{
         width: 17px;
         height:17px;
         padding-right: 20px;
     }
-    
+
     /* bottom */
-    
-    
+
+
     .bottom{
-        margin-top: 100px;
+        margin-top: 60px;
     }
-    
+
     .bottom_container{
         display: flex;
         justify-content: center;
         text-align:center;
-        margin: 0 100px;
+        margin: 0 40px;
         padding-bottom: 30px;
         border-bottom: 1px solid black ;
     }
@@ -1924,7 +1959,7 @@ body {
         height: 150px;
         object-fit: cover;
     }
-    
+
     .bottom_text{
         justify-content: center;
         margin: 0;
@@ -1946,37 +1981,44 @@ body {
     }
 
     .copyright{
-        margin: 30px 0;
+        margin: 20px 0;
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .copyright_content{
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    
+
     .copyright_text{
-        font-size: 10px;
+        margin-top: 5px;
+        margin-bottom: 0;
+        font-size: 8px;
         font-weight: bold;
         letter-spacing: 0.8px;
     }
-    
-    
+
     .copyright_text2{
-        margin-left: 5px;
+        margin-top: 5px;
+        margin-left: 3px;
         color: black;
-        font-size: 10px;
+        font-size: 8px;
         font-weight: bold;
         letter-spacing: 0.8px;
         text-decoration: none;
         transition: all 0.3s ease 0s;
     }
-    
     .copyright_text2:hover{
         opacity: 0.6;
     }
-    
+
     .copyright_logo{
-        padding: 0 30px;
+        display: none;
     }
-    
+
     /* 
     
     .start_box{
