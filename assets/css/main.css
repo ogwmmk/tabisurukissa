@@ -281,7 +281,13 @@ body {
 
 
     /* news */
-    .news{
+
+    .news_sp{
+        display: none;
+    }
+
+
+    .news_tb_pc{
         margin-top: 100px;
         margin-bottom: 90px;
         padding: 50px 50px;
@@ -289,6 +295,12 @@ body {
     }
 
     .news_container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .news_content{
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -366,17 +378,18 @@ body {
     }
 
     .about_container{
-        margin-right: 50px;
+        width: 60%;
     }
 
     .about_img1{
+        width: 100%;
         object-fit: cover;
-        width: 520px;
-        height: 500px;
+
     }
 
     .about_profile{
-
+        width: 40%;
+        padding-left: 40px;
     }
 
     .about_title{
@@ -443,8 +456,14 @@ body {
 
     /* report */
 
-    .report{
+    .report_sp{
+        display: none;
+    }
+
+    .report_tb-pc{
         margin-top: 100px;
+        padding-left: 40px;
+        padding-right: 40px;
         padding-bottom: 100px;
         background-color: #f9f8f4;
     }
@@ -587,10 +606,12 @@ body {
 
     .onlineShop_container{
         display: flex;
+        /* justify-content: space-between; */
 
     }
     .onlineShop_content{
-        width: 350px;
+        width: 40%;
+        padding-right: 50px;
 
     }
     .onlineShop_title{
@@ -653,18 +674,15 @@ body {
         width: 80%;
     }
 
-    .onlineShop_img1{
-        margin-top: 70px;
-        margin-left:60px;
-        width: 270px;
-        height: 180px;
-        object-fit: cover;
+    .onlineShop_logo{
+        display: flex;
+        width: 60%;
     }
 
-    .onlineShop_img2{
-        margin-left: auto;
-        width: 200px;
-        height: 300px;
+    .onlineShop_img{
+        margin-top: 30px;
+        width: 100%;
+        height: 80%;
         object-fit: cover;
     }
 
@@ -701,7 +719,7 @@ body {
 
     .contact_img{
         width: 100%;
-        height: 395px;
+        height: 280px;
         background-image: url("../../assets/img/contact_img.jpg");
         background-repeat: no-repeat;
         background-size: 100%;
@@ -742,9 +760,13 @@ body {
         letter-spacing: 1.8px;
     }
 
+    .contact_text br{
+        display: none;
+    }
+
     .contact_btn{
         position: absolute;
-        right: -80px;
+        right: -8%;
         width: 130px;
         border: 0.8px solid black;
     }
@@ -823,21 +845,20 @@ body {
         font-size: 12px;
         color: #fff;
     }
-    
-    
+
+
     .footer_icon{
         width: 17px;
         height:17px;
         padding-right: 20px;
     }
-    
+
     /* bottom */
-    
-    
+
     .bottom{
         margin-top: 100px;
     }
-    
+
     .bottom_container{
         display: flex;
         justify-content: center;
@@ -862,7 +883,7 @@ body {
         height: 150px;
         object-fit: cover;
     }
-    
+
     .bottom_text{
         justify-content: center;
         margin: 0;
@@ -889,7 +910,7 @@ body {
         justify-content: center;
         align-items: center;
     }
-    
+
     .copyright_text{
         font-size: 10px;
         font-weight: bold;
@@ -928,7 +949,7 @@ body {
         z-index: 9999;
         text-align:center;
         }
-    
+
       .start_box ::before {
         animation: start_box 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
         background: #fff;
@@ -938,14 +959,14 @@ body {
         position: absolute;
         z-index: 1;
       }
-    
+
     @keyframes start_box {
         100% {
             transform: translatey(100%);
         }
       }
      */
-    /* 
+    /*
     .start {
         background: #FFF;
         position: fixed;
@@ -977,14 +998,12 @@ body {
             opacity: 1; 初めに存在する 
             transform: translatey(100%);
         }
-    
+
     }  */
-    
+
     /* ここから練習 */
-    
-    
-    
-    
+
+
     .start {
         background: #FFF;
         position: fixed;
@@ -998,9 +1017,9 @@ body {
         animation-fill-mode: none;
         /* 0%の時と100%の時の状態を保つ */
         /* animation-delay: 4s; */
-    
+
     }
-    
+
     .start_box{
         overflow: hidden;
         position: relative;
@@ -1011,7 +1030,7 @@ body {
         z-index: 9999;
         text-align:center;
         }
-    
+
         .start_box ::before {
             animation: start_box 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
             background: #fff;
@@ -1021,7 +1040,7 @@ body {
             position: absolute;
             z-index: 1;
           }
-    
+
         @keyframes start_box{
             100% {
                 transform: translateY(100%);
@@ -1225,11 +1244,16 @@ body {
     }
 
     .main_text{
+        padding-right: 29px;
         margin-top: 60px;
         font-size: 11px;
         font-weight: 600;
         letter-spacing : 2px;
         line-height:2;
+    }
+
+    .main_br{
+        display: none;
     }
 
     /* info */
@@ -1336,7 +1360,7 @@ body {
         order: 1;
     }
     .info_img{
-        width: 500px;
+        width: 450px;
         height: 220px;
         object-fit: cover;
 
@@ -1345,7 +1369,11 @@ body {
 
 
     /* news */
-    .news{
+
+    .news_tb_pc{
+        display: none;
+    }
+    .news_sp{
         display: flex;
         flex-direction: column;
         margin-top: 100px;
@@ -1376,15 +1404,15 @@ body {
 
     .news_moreBox{
         order: 3;
-        /* display: flex; */
-        /* justify-content: center; */
-        /* align-items: center; */
-        /* width: 120px; */
-        /* height: 30px; */
-        /* border: 1px solid black; */
-        /* transition: all 0.3s ease 0s; */
-        /* cursor: pointer; */
-        /* order: 3; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0 0 auto;
+        width: 120px;
+        height: 30px;
+        border: 1px solid black;
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
     }
 
     .news_moreBox:hover{
@@ -1456,7 +1484,7 @@ body {
     }
 
     .about_container{
-        margin-right: 50px;
+        width: 100%;
     }
 
     .about_img1{
@@ -1466,6 +1494,8 @@ body {
     }
 
     .about_profile{
+        width: 100%;
+        padding: 0;
     }
 
     .about_title{
@@ -1532,9 +1562,16 @@ body {
 
     /* report */
 
-    .report{
+    .report_tb-pc{
+        display: none;
+    }
+
+    .report_sp{
+        display: flex;
+        flex-direction: column;
         margin-top: 100px;
-        padding-bottom: 100px;
+        padding: 0 40px;
+        padding-bottom: 50px;
         background-color: #f9f8f4;
     }
 
@@ -1543,15 +1580,31 @@ body {
         font-weight: 900;
         font-size:40px;
         letter-spacing: 1.5px;
+        margin-top: 0;
     }
+
+    .report_container{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 30px;
+        margin-bottom: 40px;
+
+    }
+/*
 
     .report_content{
         display: flex;
         align-items: center;
         margin-top: 60px;
         margin-bottom: 40px;
-    }
+    } */
 
+
+    .report_box{
+        order: 1;
+        margin: 0 auto 0 0;
+    }
 
     .report_subTitle{
         margin: 0;
@@ -1569,6 +1622,7 @@ body {
     }
 
     .report_moreBox{
+        order: 3;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1578,6 +1632,7 @@ body {
         border: 1px solid black;
         transition: all 0.3s ease 0s;
         cursor: pointer;
+
     }
 
     .report_moreBox:hover{
@@ -1596,6 +1651,11 @@ body {
     .report_post{
         display: flex;
         flex-wrap: wrap;
+        order: 2;
+        margin-top: 40px;
+        margin-left: -10px;
+        margin-right: -10px;
+
     }
 
     .report_items{
@@ -1603,7 +1663,7 @@ body {
         justify-content: space-between;
     }
     .report_item{
-        padding-right: 20px;
+        padding: 0 10px;
         padding-bottom: 10px;
         cursor: pointer;
     }
@@ -1682,6 +1742,7 @@ body {
     .onlineShop_content{
         order: 2;
         width: 100%;
+        padding-right: 0;
 
     }
     .onlineShop_title{
@@ -1748,19 +1809,8 @@ body {
         order: 1;
     }
 
-    .onlineShop_img1{
-        margin-top: 0;
-        margin-bottom: 40px;
-        margin-left: 0;
-        width: 270px;
-        height: 180px;
-        object-fit: cover;
-    }
-
-    .onlineShop_img2{
-        margin-left: 20px;
-        width: 200px;
-        height: 300px;
+    .onlineShop_img{
+        width: 100%;
         object-fit: cover;
     }
 
@@ -1842,7 +1892,7 @@ body {
 
     .contact_btn{
         position: absolute;
-        right: -60px;
+        right: -8%;
         width: 130px;
         border: 0.8px solid black;
     }
@@ -2196,7 +2246,7 @@ body {
 @media screen and (min-width: 1000px) { /*ウィンドウ幅が1000px以上の場合に適用_PC*/
 
 .mw_1280{
-max-width: 100%;
+width: 100%;
 margin: 0 auto;
 }
 
@@ -2209,7 +2259,7 @@ margin: 0 auto;
     position: sticky;
     top: 0;
     z-index: 999;
-    width: 100%;
+    max-width: 1200px;
     background: #fff;
     /* transition: 1s; */
 }
@@ -2363,6 +2413,10 @@ margin: 0 auto;
     line-height:2;
 }
 
+.main_br{
+    display: none;
+}
+
 /* info */
 
 .info{
@@ -2474,18 +2528,27 @@ margin: 0 auto;
 
 
 /* news */
-.news{
+.news_sp{
+    display: none;
+}
+
+.news_tb_pc{
     margin-top: 100px;
     margin-bottom: 170px;
     padding: 50px 50px;
     background-color: #f9f8f4;
 }
-
 .news_container{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
+/* .news_content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
 
 .news_title{
     font-size: 25px;
@@ -2640,7 +2703,11 @@ margin: 0 auto;
 
 /* report */
 
-.report{
+.report_sp{
+    display: none;
+}
+
+.report_tb-pc{
     margin-top: 100px;
     padding-bottom: 100px;
     background-color: #f9f8f4;
@@ -2858,7 +2925,7 @@ margin: 0 auto;
     width: 80%;
 }
 
-.onlineShop_img1{
+.onlineShop_img{
     margin-top: 70px;
     margin-left:60px;
     width: 270px;
@@ -2866,14 +2933,6 @@ margin: 0 auto;
     object-fit: cover;
 }
 
-
-.onlineShop_img2{
-    margin-left: auto;
-    width: 200px;
-    height: 300px;
-    object-fit: cover;
-
-}
 
 
 /* message */
