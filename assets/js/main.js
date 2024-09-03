@@ -42,14 +42,36 @@ $(function(){
 
 
 
+
+
+$(function(){
+  var pos = 0;
+  var header = $('.header');
+  
+  $(window).on('scroll', function(){
+    if($(this).scrollTop() < pos ){
+      //上にスクロールしたとき
+      header.removeClass('hed_hide');
+    }else{
+      //下にスクロールしたとき
+      header.addClass('hed_hide');
+    }
+    pos = $(this).scrollTop();
+  });
+});
+
+
 // start
 
 $(function() {
 	setTimeout(function(){
-		$(".start_box").fadeIn(1600);
+		$(".in").fadeIn(1600);
 	},1000); //秒後にロゴをフェードイン
 	setTimeout(function(){
-		$(".start").hide(3000);
-	},2500); //秒後にロゴ含め真っ白背景をフェードアウト
+		$(".out").hide(3000);
+	},4000); //秒後にロゴ含め真っ白背景をフェードアウト
 });
+
+
+
 
