@@ -947,7 +947,6 @@ body {
         overflow: hidden;
         position: relative;
         position: fixed;
-        left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
         display: none;
@@ -1013,7 +1012,7 @@ body {
         background: #FFF;
         position: fixed;
         top: 0;
-        left: 0;
+        /* left: 0; */
         height: 100%;
         width: 100%;
         z-index: 9000;
@@ -1028,7 +1027,7 @@ body {
     .start_box{
         overflow: hidden;
         position: relative;
-        left: 50%;
+        /* left: 50%; */
         top: 50%;
         transform: translate(-50%, -50%);
         display: none;
@@ -1057,7 +1056,7 @@ body {
         background: #FFF;
         position: fixed;
         top: 0;
-        left: 0;
+        /* left: 0; */
         height: 100%;
         width: 100%;
         z-index: 9000;
@@ -2151,7 +2150,7 @@ body {
         background: #FFF;
         position: fixed;
         top: 0;
-        left: 0;
+        /* left: 0; */
         height: 100%;
         width: 100%;
         z-index: 9000;
@@ -2195,7 +2194,6 @@ body {
         background: #FFF;
         position: fixed;
         top: 0;
-        left: 0;
         height: 100%;
         width: 100%;
         z-index: 9000;
@@ -3207,112 +3205,45 @@ margin: 0 auto;
     padding: 0 30px;
 }
 
-/* 
 
-.start_box{
-    overflow: hidden;
-    position: relative;
-    position: fixed;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
-	display: none;
-	z-index: 9999;
-    text-align:center;
-    }
 
-  .start_box ::before {
-    animation: start_box 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-    background: #fff;
-    content: '';
-    inset: 0;
-    pointer-events: none;
-    position: absolute;
-    z-index: 1;
-  }
-
-@keyframes start_box {
-    100% {
-        transform: translatey(100%);
-    }
-  }
- */
-/* 
-.start {
-	background: #FFF;
-	position: fixed;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	z-index: 9000;
-    animation: start 4s;*keyframesで命名したものを使う。2秒間で消える
-    animation-fill-mode: none; 0%の時と100%の時の状態を保つ
-    animation-delay: 4s;
-}
-.start ::before {
-    animation: start 10s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-    background: #fff;
-    content: '';
-    inset: 0;
-    pointer-events: no;
-    position: absolute;
-    z-index: 1;
-    }
-
-@keyframes start {
-    0% {
-        opacity: 1;
-        transform: translatey(0);
-    }
-    100% {
-        opacity: 1; 初めに存在する 
-        transform: translatey(100%);
-    }
-
-}  */
 
 /* ここから練習 */
 
-
-
-
 .start {
 	background: #FFF;
 	position: fixed;
 	top: 0;
-	left: 0;
+	/* left: 0; */
 	height: 100%;
 	width: 100%;
 	z-index: 9000;
-    /* animation: start 4s; */
+    animation: start 4s;
     /* *keyframesで命名したものを使う。2秒間で消える */
     animation-fill-mode: none;
     /* 0%の時と100%の時の状態を保つ */
-    /* animation-delay: 4s; */
-
+    animation-delay: 4s;
 }
 
 .start_box{
     overflow: hidden;
     position: relative;
-	left: 50%;
 	top: 50%;
-	transform: translate(-50%, -50%);
+	transform: translateY(-50%);
 	display: none;
 	z-index: 9999;
     text-align:center;
     }
 
     .start_box ::before {
+        position: absolute;
         animation: start_box 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
         background: #fff;
         content: '';
         inset: 0;
         pointer-events: none;
-        position: absolute;
         z-index: 1;
-      }
+    }
 
     @keyframes start_box{
         100% {
@@ -3321,21 +3252,12 @@ margin: 0 auto;
     }
 
 
-.start {
-	background: #FFF;
-	position: fixed;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	z-index: 9000;
-    /* animation: start 4s; */
-    /* *keyframesで命名したものを使う。2秒間で消える */
-    animation-fill-mode: none;
-    /* 0%の時と100%の時の状態を保つ */
-    /* animation-delay: 4s; */
 
-}
+
+/* .out{
+    transform: translateY(50px);
+
+} */
 
 /* ここまで */
 
